@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+body {
+  background: #00bff3;
+}
+.person {
+  position: fixed;
+  bottom: 158px;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 60px;
+  background: #000;
+  z-index: 99;
+}
+.person .person-header {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  left: 0;
+  top: -40px;
+  background: #000;
+  border-radius: 50%;
+}
+.person .person-foot-left,
+.person .person-foot-right,
+.person .person-hand-left,
+.person .person-hand-right {
+  position: absolute;
+  width: 15px;
+  height: 40px;
+  left: -5px;
+  top: 50px;
+  background: #000;
+  transform: rotate(30deg);
+}
+.person .person-foot-right {
+  transform: rotate(-30deg);
+  left: 30px;
+}
+.person .person-hand-left {
+  top: -2px;
+  left: -17px;
+  width: 10px;
+  height: 60px;
+}
+.person .person-hand-right {
+  top: -2px;
+  left: auto;
+  right: -17px;
+  width: 10px;
+  height: 60px;
+  transform: rotate(-30deg);
+}
+.floor {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 128px;
+  z-index: 5;
+}
+.floor ul {
+  overflow: hidden;
+}
+.floor ul li {
+  width: 100px;
+  height: 128px;
+  background: #a67c53;
+  float: left;
+  position: relative;
+}
+.floor ul li span:nth-child(1) {
+  width: 100%;
+  height: 50px ;
+  float: left;
+  background: #8dc63f;
+}
+.floor ul li span:nth-child(2),
+.floor ul li span:nth-child(3) {
+  width: 50%;
+  height: 40px ;
+  float: left;
+  background: #8b6139;
+  transform: skew(0deg, -30deg) translate(0, 20px);
+}
+.floor ul li span:nth-child(3) {
+  transform: skew(0deg, 30deg) translate(0, 20px);
+}
+.floor ul li .arrow {
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+.floor ul li .arrow i {
+  width: 0;
+  height: 0;
+  float: left;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent  transparent #a67c53 transparent;
+}
+.cloud {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 90;
+}
+.cloud .cloud-first {
+  position: absolute;
+  width: 180px;
+  height: 60px;
+  border-radius: 30px;
+  background: #fff;
+}
+.cloud .cloud-first span {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+}
+.cloud .cloud-first span:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 113px;
+  top: -15px;
+}
+.cloud .cloud-first span:nth-child(2) {
+  width: 95px;
+  height: 95px;
+  left: 25px;
+  top: -38px;
+}
+.hill {
+  position: fixed;
+  left: 0;
+  bottom: 128px;
+  z-index: 91;
+}
+.hill .hill-first {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 400px;
+  border-color: transparent transparent #c69c6d transparent;
+}
+.hill .hill-first .hill-half {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.hill .hill-first .hill-half span {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  left: -400px;
+  top: -400px;
+  border-style: solid;
+  border-width: 400px;
+  border-color: transparent transparent #8c6239 transparent;
+}
+.sun {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.sun .sun-first {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  left: 1200px;
+  top: 30px;
+  background: yellow;
+}
+.sun .sun-first li {
+  position: absolute;
+  left: 50%;
+  margin-left: -2.5px;
+  top: -20px;
+  width: 5px;
+  height: 15px;
+  background: yellow;
+  transform-origin: 50% 45px ;
+}
+.skill {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+}
+.skill .skill-main {
+  position: absolute;
+  bottom: 128px;
+  width: 700px;
+  height: 450px;
+}
+.skill .skill-main h1 {
+  position: absolute;
+  font-size: 50px;
+  color: red;
+  top: -55px;
+  left: 50%;
+  margin-left: -125px;
+}
+.skill .skill-main dl {
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  font-weight: bold;
+  text-align: center;
+  left: 5000px;
+}
+.skill .skill-main dl dd {
+  margin-top: 25px;
+}
+.skill .skill-main .wing {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: -100px;
+  top: -550px;
+  animation: wing .5s linear infinite alternate;
+  overflow: hidden;
+  transform-origin: 100% 50%;
+}
+.skill .skill-main .wing span:nth-child(1),
+.skill .skill-main span:nth-child(2) {
+  position: absolute;
+  left: 37px;
+  top: 23px;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background: #000;
+  transform: rotate(27deg);
+}
+.skill .skill-main span:nth-child(2) {
+  height: 30px;
+  border-radius: 15px;
+  left: 42px;
+  top: 67px;
+}
+@-webkit-keyframes wing {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+.skill .skill-main .wing-right {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: -100px;
+  top: -550px;
+  animation: wing .5s linear infinite alternate;
+  overflow: hidden;
+  transform-origin: 0 50%;
+}
+.skill .skill-main .wing-right span:nth-child(1),
+.skill .skill-main .wing-right span:nth-child(2) {
+  position: absolute;
+  right: 37px;
+  top: 23px;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background: #000;
+  transform: rotate(153deg);
+}
+.skill .skill-main .wing-right span:nth-child(2) {
+  height: 30px;
+  border-radius: 15px;
+  right: 42px;
+  top: 67px;
+  left: auto;
+}
+@-webkit-keyframes wing {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+.skill .current dl {
+  top: -700px;
+}
+.skill .current dl:nth-child(2) {
+  left: 0;
+}
+.skill .current dl:nth-child(3) {
+  left: 230px;
+}
+.skill .current dl:nth-child(4) {
+  left: 550px;
+}
+.tree {
+  position: fixed;
+  left: 0;
+  bottom: 128px;
+}
+.tree .tree-main {
+  position: absolute;
+  width: 360px;
+  height: 350px;
+  bottom: 0;
+  left: 50px;
+}
+.tree .tree-main .tree1 {
+  float: left;
+  position: absolute;
+  left: 0;
+  bottom: 35px;
+  width: 175px;
+  height: 215px;
+}
+.tree .tree-main span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 175px;
+  height: 215px;
+  background: #3AB54A;
+  border-radius: 107.5px 107.5px 0 0 ;
+  z-index: 3;
+}
+.tree .tree-main .tree1 .leaf {
+  position: absolute;
+  bottom: -3.5px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+}
+.tree .tree-main .tree1 .leaf i {
+  float: left;
+  width: 17.5px;
+  height: 10px;
+  border-radius: 0 0 8.5px 8.5px;
+  background: #3AB54A;
+}
+.tree .tree-main .tree1 b {
+  position: absolute;
+  bottom: -135px;
+  left: 50%;
+  margin-left: -9px;
+  width: 33px;
+  height: 146px;
+  background: #A67C52;
+  z-index: -1;
+}
+.tree .tree-main .tree1 .color i {
+  background: #1dbf96;
+}
